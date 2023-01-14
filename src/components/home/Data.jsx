@@ -57,7 +57,7 @@ const Data = () => {
 
         <h3 className="home__subtitle">Desenvolvedor front-end</h3>
         
-        <p className="home__description">Eu sou um desenvolvedor que moro em Timóteo, Minas Gerais, Brasil.<br/> Sou apaioxado com o desenvolvimento web e tambem muito dedicado ao trabalho.</p>
+        <p className="home__description">Desenvolvedor residente na cidade de Timóteo, Minas Gerais, Brasil.<br/> Sou apaixonado com o desenvolvimento web e tambem muito dedicado ao trabalho e aos estudos.Quer me conhecer melhor ? Confira toda página!</p>
 
         <a href="#contact" className="button button--flex">
             Diga olá
