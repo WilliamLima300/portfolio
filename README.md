@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## DEPLOY: https://steady-biscotti-376cb2.netlify.app
+
 ## Available Scripts
 
 In the project directory, you can run:
