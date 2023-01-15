@@ -55,7 +55,7 @@ const Data = () => {
             </svg>
         </h1>
 
-        <h3 className="home__subtitle">Desenvolvedor front-end</h3>
+        <h3 className="home__subtitle">Desenvolvedor Web</h3>
         
         <p className="home__description">Desenvolvedor residente na cidade de Timóteo, Minas Gerais, Brasil.<br/> Sou apaixonado com o desenvolvimento web e tambem muito dedicado ao trabalho e aos estudos.Quer me conhecer melhor ? Confira toda página!</p>
 
