@@ -82,7 +82,7 @@ export const projectsData = [
       image: tarefas,
       title: "Lista de Tarefas JavaScript",
       category: "Apps",
-      demo:"https://phenomenal-sable-6f29a5.netlify.app",
+      demo:"https://williamlima300.github.io/ListadeTarefas/",
     },
     {
       id: 11,
