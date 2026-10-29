@@ -1,65 +1,68 @@
 /* Adicionar estilo a parte HABILIDADES da pagina */
 
 .skills__container{
-    grid-template-columns: repeat(2,350px);
-    column-gap: 3rem;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
     justify-content: center;
 }
 
 .skills__content{
     background-color: var(--container-color);
-    border: 1px solid rgba(0,0,0,0.1);
-    padding: 2rem 4rem;
-    border-radius: 1.25rem;
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.skills__content:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 18px 45px rgba(20, 38, 31, .08);
+}
+
+.skills__icon{
+    display: inline-grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: .9rem;
+    color: var(--button-icon-color);
+    background: var(--soft-green);
+    font-size: 1.5rem;
 }
 
 .skills__title{
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
-    text-align: center;
-    margin-bottom: var(--mb-1-5);
-    justify-content: center;
+    margin: 1.5rem 0 .6rem;
 }
 
-.skills__box{
+.skills__description{
+    font-size: var(--small-font-size);
+    min-height: 4.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.skills__tags{
     display: flex;
-    justify-content: center;
-    column-gap: 2.5rem;
+    flex-wrap: wrap;
+    gap: .5rem;
 }
 
-.skills__group{
-    display: grid;
-    align-items: flex-start;
-    row-gap: 1rem;
-}
-
-.skills__data{
-    display: flex;
-    column-gap: 0.5rem;
-}
-
-.skills .bx-badge-check{
-    font-size: 1rem;
-    color:var(--button-icon-color);
-}
-
-.skills__name{
-    font-size: var(--normal-font-size);
-    font-weight: var(--font-medium);
-    line-height: 18px;
-}
-
-.skills_level{
-    font-size: var(--tiny-font-size);
-    margin-top: -3px;
-    
+.skills__tags span{
+    color: var(--title-color);
+    background: var(--body-color);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    padding: .35rem .7rem;
+    font-size: var(--smaller-font-size);
+    font-weight: 600;
 }
 
 /* BREAKPOINTS(MOBILE, TABLET, DESKTOP) */
   /* PARA DISPOSTIVOS GRANDES */
   @media screen and (max-width:992px) {
     .skills__container{
-        grid-template-columns: max-content;
+        grid-template-columns: repeat(2, 1fr);
         row-gap: 2rem;
     }
   }
@@ -71,22 +74,13 @@
         grid-template-columns: 1fr;
     }
 
-    .skills__content{
-        padding:1.5rem;
-    }
+    .skills__content{ padding:1.5rem; }
+    .skills__description{ min-height: auto; }
   }
   
   /* PARA DISPOSTIVOS PEQUENOS */
  
   @media screen and (max-width:350px) {
 
-    .skills_box{
-        column-gap: 1.25rem;
-
-    }
-
-    .skills_name{
-        font-size: var(--small-font-size);
-    }
   }
   

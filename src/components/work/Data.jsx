@@ -15,6 +15,39 @@ import netflix from "../../assets/netflixclone.png";
 
 export const projectsData = [
     {
+      id: 101,
+      title: "Já Parei!",
+      category: "Destaques",
+      type: "Aplicativo Android",
+      description: "Aplicativo para apoiar quem quer parar de fumar, com acompanhamento de progresso, economia, conquistas, exercícios de respiração e comunidade.",
+      tags: ["Mobile", "TypeScript", "Gamificação"],
+      icon: "bx bx-mobile-alt",
+      featured: true,
+      demo: "https://play.google.com/store/apps/details?id=com.japarei",
+    },
+    {
+      id: 102,
+      title: "WizBot",
+      category: "Destaques",
+      type: "Plataforma de atendimento",
+      description: "Centraliza múltiplos números de WhatsApp, equipes, filas e automações em um só painel para tornar o atendimento mais organizado e eficiente.",
+      tags: ["Chatbot", "IA", "Automação"],
+      icon: "bx bx-bot",
+      featured: true,
+      demo: "https://wizbot.com.br",
+    },
+    {
+      id: 103,
+      title: "WillBePlay",
+      category: "Destaques",
+      type: "Experiência de karaokê",
+      description: "Plataforma de karaokê criada para transformar a escolha e reprodução de músicas em uma experiência digital simples e envolvente.",
+      tags: ["Web app", "TypeScript", "Experiência"],
+      icon: "bx bx-microphone",
+      featured: true,
+      demo: "https://willbeplay.com.br",
+    },
+    {
       id: 1,
       image: quimera,
       title: "Site Quimera Agência PHP JavaScript",
@@ -115,6 +148,9 @@ export const projectsData = [
   ];
 
   export const projectsNav = [
+    {
+        name:'Destaques'
+    },
     {
         name:'Todos'
     },

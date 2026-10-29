@@ -1,12 +1,14 @@
 /* Adicionar CSS para a pagina HOME(Inicio) */
 
 .home__container{
-    row-gap: 7rem;
+    row-gap: 5rem;
+    min-height: calc(100vh - var(--header-height));
+    align-content: center;
 }
 .home__content{
-    grid-template-columns: 114px repeat(2,1fr);
-    padding-top: 5.5rem;
-    column-gap: 2rem;
+    grid-template-columns: 56px 1.1fr .9fr;
+    padding-top: 7rem;
+    column-gap: 3.5rem;
     align-items: center;
     
 }
@@ -19,42 +21,35 @@
 
 .home__social-icon{
     font-size: 1.25rem;
-    color:var(--title-color-dark);    
+    color:var(--title-color-dark);
     cursor:pointer;
 }
 
 .home__title{
     font-size: var(--big-font-size);
-    margin-bottom: var(--mb-0-25);
+    margin: .75rem 0 1.5rem;
+    letter-spacing: -.065em;
+    max-width: 690px;
 }
 
-.home__hand{
-    width:28px;
-    height: 28px;
-    margin-left: 0.4rem;
+.home__title span{
+    color: var(--button-icon-color);
 }
 
-.home__subtitle{
-    position: relative;
-    font-size: var(--h3-font-size);
-    padding-left: 5.4rem;
-    font-weight: var(--font-normal);
-    margin-bottom: var(--mb-1);
-}
-
-.home__subtitle:before{
-    content: '';
-    position: absolute;
-    width: 70px;
-    height: 1px;
-    background-color: var(--text-color);
-    left: 0;
-    top:1rem;
+.home__eyebrow{
+    display: inline-flex;
+    color: var(--button-icon-color);
+    background: var(--soft-green);
+    border-radius: 999px;
+    padding: .4rem .85rem;
+    font-size: var(--small-font-size);
+    font-weight: 700;
 }
 
 .home__description{
-    max-width: 400px;
-    margin-bottom: var(--mb-3);
+    max-width: 620px;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
 }
 
 
@@ -70,11 +65,11 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    box-shadow: inset 0 0 0 3px var(--button-icon-color) ;
+    box-shadow: inset 0 0 0 5px var(--body-color), 0 0 0 1px var(--border-color), 24px 24px 0 var(--soft-green);
     order:1;
     justify-self: center;
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 430px;
     animation: profile__animate 8s ease-in-out infinite 1s;
 }
 
@@ -131,23 +126,8 @@
   /* PARA DISPOSTIVOS GRANDES */
   @media screen and (max-width:992px) {
     .home__content{
-        grid-template-columns: 100px repeat(2,1fr);
+        grid-template-columns: 56px repeat(2,1fr);
         column-gap:1.25rem;
-    }
-
-    .home__hand{
-        width:26px;
-        height: 26px;
-    }
-
-    .home__subtitle{
-        padding-left: 3.75rem;
-        margin-bottom:var(--mb-1);
-    }
-    
-    .home__subtitle:before{
-        width: 42px;
-        top:0.8rem;
     }
 
     .home__description{
@@ -156,9 +136,8 @@
     }
 
     .home__img{
-        width: 250px;
-        height: 250px;
-        box-shadow: inset 0 0 0 3px var(--button-icon-color);
+        width: 280px;
+        height: 350px;
     }
 
     .home__scroll{
@@ -184,9 +163,8 @@
     }
 
     .home__img{
-        box-shadow: inset 0 0 0 3px var(--button-icon-color);
         width: 200px;
-        height: 200px;
+        height: 250px;
     }
 
     .home__scroll{
@@ -202,10 +180,6 @@
     .home__img{
         width:180px;
         height: 180px;
-    }
-
-    .home__hand{
-        display: none;
     }
 
   }

@@ -6,8 +6,8 @@ import { projectsNav } from './Data';//importar tipo dos projetos de DATA
 import WorksItems from './WorksItems';
 
 const Works = () => {
-    const[ item,setItem] = useState({name: 'Todos'});
-    const[ projects, setProjects] = useState([]);
+    const[ item,setItem] = useState({name: 'Destaques'});
+    const[ projects, setProjects] = useState(projectsData.filter((project) => project.featured));
     const[active,setActive] = useState(0);
 
     useEffect(() =>{
@@ -21,8 +21,8 @@ const Works = () => {
         }
     },[item]);
 
-    const handleClick = (e,index) => {
-        setItem({name:e.target.textContent });
+    const handleClick = (name,index) => {
+        setItem({name});
         setActive(index);
     }
 
@@ -31,9 +31,9 @@ const Works = () => {
         <div className="work__filters">
             {projectsNav.map((item, index) => {
                 return (
-                    <span onClick={(e)=>{
-                        handleClick(e,index);
-                    }} className={`${active === index ? 'active-work' : ""}work__item`} key={index}>{item.name}</span>
+                    <button onClick={() => handleClick(item.name,index)}
+                      className={`${active === index ? 'active-work ' : ""}work__item`}
+                      key={item.name}>{item.name}</button>
                 )
             })}
         </div>

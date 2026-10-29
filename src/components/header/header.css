@@ -6,7 +6,9 @@
     top:0;
     left:0;
     z-index: var(--z-fixed);
-    background-color: var(--body-color);
+    background-color: rgba(245, 243, 236, .88);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid transparent;
 }
 
 .nav{
@@ -24,6 +26,16 @@
     font-weight: var(--font-medium);
 }
 
+.nav__logo{
+    font-family: var(--title-font);
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.nav__logo span{
+    color: var(--accent-color);
+}
+
 .nav__list{
     display: flex;
     column-gap: 2rem;
@@ -33,7 +45,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: var(--small-font-s);
+    font-size: var(--small-font-size);
     color:var(--title-color);
     font-weight: var(--font-medium);
     transition: .3s;
@@ -54,8 +66,7 @@
 
 /* mudar background menu */
 .scroll-header{
-    box-shadow: 0 -1px 4px rgba(0,0,0, 0.15);
-
+    border-color: var(--border-color);
 }
 /* BREAKPOINTS(MOBILE, TABLET, DESKTOP) */
   /* PARA DISPOSTIVOS GRANDES */

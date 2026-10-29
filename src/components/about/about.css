@@ -8,8 +8,11 @@
 
 .about__img{
     width: 350px;
-    border-radius: 1.5rem;
+    height: 460px;
+    object-fit: cover;
+    border-radius: 2rem;
     justify-self: center;
+    box-shadow: -20px 20px 0 var(--soft-green);
 }
 
 .about__info{
@@ -20,8 +23,8 @@
 
 .about__box{
     background-color: var(--container-color);
-    border:1px solid rgba(0,0,0,0.1);
-    border-radius: 0.75rem;
+    border:1px solid var(--border-color);
+    border-radius: 1rem;
     text-align: center;
     padding: 1rem 1.25rem;
 }
@@ -44,6 +47,10 @@
 
 .about__description{
     padding: 0 4rem 0 0;
+    margin-bottom: var(--mb-1);
+}
+
+.about__description:last-of-type{
     margin-bottom: var(--mb-2-5);
 }
 
@@ -57,6 +64,7 @@
 
     .about__img{
         width: 220px;
+        height: 290px;
     }
 
     .about__box{

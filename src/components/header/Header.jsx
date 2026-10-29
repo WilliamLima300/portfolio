@@ -1,34 +1,25 @@
-import React, { useState } from 'react'; //Importar react
-import "./header.css";//importar css do APP
-
-
+import React, { useEffect, useState } from 'react';
+import "./header.css";
 
 const Header = () => {
-    /* =====Mudar background do Menu selecionado=== */
-        
-        window.addEventListener("scroll",function(){
-            const header = document.querySelector(".header");
-    
-            if(this.scrollY >= 80) header.classList.add("scroll-header");
-            else header.classList.remove("scroll-header");
-        });
-    
+    const [toggle, showMenu] = useState(false);
+    const [activeNav, setActiveNav] = useState("#home");
 
-    /* =====Toggle Menu=== */
-       const [Toggle, showMenu] = useState(false);
-       const[activeNav,setActiveNav] = useState("#home")
+    useEffect(() => {
+        const handleScroll = () => {
+            document.querySelector(".header")?.classList.toggle("scroll-header", window.scrollY >= 80);
+        };
 
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
   return (
-
-    
-    
-    // Adicionar tag header com todos menus e logo
     <header className="header">
         <nav className="nav container">
-            <a href="index.html" className="nav__logo">&lt;&frasl;William&gt;</a>
+            <a href="#home" className="nav__logo">W<span>.</span></a>
         
-            <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
+            <div className={toggle ? "nav__menu show-menu" : "nav__menu"}>
                 <ul className="nav__list grid">
                     <li className="nav__item">
                         <a href="#home" onClick={()=> setActiveNav('#home')} className={activeNav === "#home" ? " nav__link active-link" : "nav__link" } >
@@ -47,7 +38,7 @@ const Header = () => {
                     </li>
                     <li className="nav__item">
                         <a href="#portfolio" onClick={()=> setActiveNav('#portfolio')} className={activeNav === "#portfolio" ? " nav__link active-link" : "nav__link" }>
-                            <i className="uil uil-scenery nav__icon"></i>Portfolio
+                            <i className="uil uil-scenery nav__icon"></i>Projetos
                         </a>
                     </li>
                     <li className="nav__item">
@@ -57,11 +48,11 @@ const Header = () => {
                     </li>
                 </ul>
                 
-                <i className="uil uil-times nav__close" onClick={() => showMenu(!Toggle)}></i>
+                <i className="uil uil-times nav__close" onClick={() => showMenu(false)}></i>
                 
             </div>
 
-            <div className="nav__toggle" onClick={() => showMenu(!Toggle)}>
+            <div className="nav__toggle" onClick={() => showMenu(!toggle)}>
                 <i className="uil uil-apps"></i>
             </div>
         </nav>

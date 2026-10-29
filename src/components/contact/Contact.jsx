@@ -18,7 +18,7 @@ const Contact = () => {
                         <i className="bx bx-mail-send contact__card-icon"></i>
 
                         <h3 className="contact__card-title">Email</h3>
-                        <span className="contact__card-data">user@email.com</span>
+                        <span className="contact__card-data">williamlima300@gmail.com</span>
 
                         <a href="mailto:williamlima300@gmail.com" className="contact__button">Enviar <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
                     </div>
@@ -27,7 +27,7 @@ const Contact = () => {
                         <i className="bx bxl-whatsapp contact__card-icon"></i>
 
                         <h3 className="contact__card-title">Whatsapp</h3>
-                        <span className="contact__card-data">(xx) xxxxx-xxxx</span>
+                        <span className="contact__card-data">Vamos conversar pelo WhatsApp</span>
 
                         <a href="https://wa.me/5531986941926?text=Ol%C3%A1,%20Vim%20atraves%20do%20portfolio!" className="contact__button">Enviar <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
                     </div>
@@ -40,17 +40,17 @@ const Contact = () => {
                 <form action="https://getform.io/f/a13e62eb-260f-42b1-87df-caf074821dc2" method="POST" className="contact__form">
                     <div className="contact__form-div">
                         <label className="contact__form-tag">Nome</label>
-                        <input type="text" name="name" className="contact__form-input" placeholder="Insira seu nome" />
+                        <input type="text" name="name" className="contact__form-input" placeholder="Insira seu nome" required />
                     </div>
 
                     <div className="contact__form-div">
                         <label className="contact__form-tag">E-mail</label>
-                        <input type="email" name="email" className="contact__form-input " placeholder="Insira seu e-mail" />
+                        <input type="email" name="email" className="contact__form-input " placeholder="Insira seu e-mail" required />
                     </div>
 
                     <div className="contact__form-div">
                         <label className="contact__form-tag">Projeto</label>
-                        <textarea type="text" name="message" cols="30" rows="10" className="contact__form-input contact__form-area" placeholder="Descreva como você quer seu projeto"></textarea>
+                        <textarea name="message" cols="30" rows="10" className="contact__form-input contact__form-area" placeholder="Descreva como você quer seu projeto" required></textarea>
                     </div>
 
                     <button className="button button--flex">

@@ -9,20 +9,21 @@ const About = () => {
     <div>
       <section className="about section" id="about">
 
-        <h2 className="section__title">Vamos falar sobre mim!</h2>
-        <span className="section__subtitle">Minha introdução</span>
+        <h2 className="section__title">Código com propósito</h2>
+        <span className="section__subtitle">Minha evolução acontece construindo produtos reais.</span>
         
         <div className="about__container container grid">
-            <img src={Aboutimg} alt="" className="about__img"/>
+            <img src={Aboutimg} alt="William Lima Alves" className="about__img"/>
 
             <div className="about__data">
                 <Info />
 
-                <p className="about__description"> Como desenvolvedor web eu crio páginas e aplicações para web.Atualmente estou com 2 anos de experiência e com clientes satisfeitos com os projetos que lidei.</p>
+                <p className="about__description">Sou William Lima Alves, desenvolvedor de Timóteo, Minas Gerais. Minha trajetória começou na web e avançou para produtos mais completos: aplicativos, plataformas de atendimento, automações e experiências com inteligência artificial.</p>
+                <p className="about__description">Hoje exploro TypeScript e IA para criar soluções mais robustas, inteligentes e fáceis de usar. Gosto de aprender na prática, transformar problemas em produto e acompanhar cada projeto até ele chegar às pessoas.</p>
 
                 <a download="" href={CV} className="button button--flex">Currículo
                 <svg
-                class="button__icon"
+                className="button__icon"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
